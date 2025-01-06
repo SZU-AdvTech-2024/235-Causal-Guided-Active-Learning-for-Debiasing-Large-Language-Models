@@ -1,13 +1,9 @@
 @inproceedings{REPO235,
     author = "Sun, Zhouhao and Du, Li and Ding, Xiao and Ma, Yixuan and Zhao, Yang and Qiu, Kaitao and Liu, Ting and Qin, Bing",
     editor = "Ku, Lun-Wei and Martins, Andre and Srikumar, Vivek",
-    address = "Bangkok, Thailand",
     booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    doi = "10.18653/v1/2024.acl-long.778",
     month = "August",
     pages = "14455--14469",
-    publisher = "Association for Computational Linguistics",
     title = "{Causal-Guided Active Learning for Debiasing Large Language Models}",
-    url = "https://aclanthology.org/2024.acl-long.778",
     year = "2024"
 }
