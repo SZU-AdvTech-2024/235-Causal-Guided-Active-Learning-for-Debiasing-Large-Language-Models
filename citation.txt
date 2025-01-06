@@ -1,7 +1,6 @@
 @inproceedings{REPO235,
     author = "Sun, Zhouhao and Du, Li and Ding, Xiao and Ma, Yixuan and Zhao, Yang and Qiu, Kaitao and Liu, Ting and Qin, Bing",
     editor = "Ku, Lun-Wei and Martins, Andre and Srikumar, Vivek",
-    abstract = "Although achieving promising performance, recent analyses show that current generative large language models (LLMs) may still capture dataset biases and utilize them for generation, leading to poor generalizability and harmfulness of LLMs. However, due to the diversity of dataset biases and the over-optimization problem, previous prior-knowledge-based debiasing methods and fine-tuning-based debiasing methods may not be suitable for current LLMs.To address this issue, we explore combining active learning with the causal mechanisms and propose a casual-guided active learning (CAL) framework, which utilizes LLMs itself to automatically and autonomously identify informative biased samples and induce the bias patterns. Then a cost-effective and efficient in-context learning based method is employed to prevent LLMs from utilizing dataset biases during generation.Experimental results show that CAL can effectively recognize typical biased instances and induce various bias patterns for debiasing LLMs.",
     address = "Bangkok, Thailand",
     booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
     doi = "10.18653/v1/2024.acl-long.778",
