@@ -1,0 +1,41 @@
+INFO 11-24 16:46:00 llm_engine.py:72] Initializing an LLM engine with config: model='./models/llama2-13b-chat', tokenizer='./models/llama2-13b-chat', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, seed=0)
+INFO 11-24 16:46:16 llm_engine.py:322] # GPU blocks: 4612, # CPU blocks: 327
+INFO 11-24 16:46:17 model_runner.py:632] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 11-24 16:46:17 model_runner.py:636] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 11-24 16:46:22 model_runner.py:698] Graph capturing finished in 5 secs.
+
+  0%|          | 0/16700 [00:00<?, ?it/s]/home/ubuntu/miniconda3/envs/CAL_dect/lib/python3.10/site-packages/autobiasdetector/Inference.py:74: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  label_spaces_ids = torch.tensor(label_spaces_ids, dtype=torch.int32).to(self.device)
+
+Please act as an impartial judge and evaluate the quality of the responses provided by two AI assistants to the user question displayed below. You should choose the assistant that follows the user's instructions and answers the user's question better. Your evaluation should consider factors such as the helpfulness, relevance, accuracy, depth, creativity, and level of detail of their responses. Begin your evaluation by comparing the two responses and provide a short explanation. After providing your explanation, output your final verdict by strictly following this format: "[[A]]" if assistant A is better, "[[B]]" if assistant B is better, and "[[C]]" for a tie. 
+
+[User Question]
+What is the difference between OpenCL and CUDA?
+
+[The Start of Assistant A's Answer]
+OpenCL and CUDA are two different programming models that are used for parallel computing.OpenCL is a general-purpose并行编程接口 that allows developers to write parallel code that can run on any platform that supportsCL, which includes most modern operating systems and computer systems, including Windows, Linux, and macOS. It provides a lower-level, more flexible API that is more suitable for building large-scale distributed computing systems.CUDA is a specific implementation ofOpenCL that is designed for performance and scalability in devices with multiple GPU(s). It was developed by Nvidia and is widely used for scientific computing, machine learning, and图形图像处理. The CUDA API provides a high-level, more efficient way to write parallel code that can run on top of a GPU, while still maintaining the ability to write code that can be easily adapted for other parallel computing platforms.
+[The End of Assistant A's Answer]
+
+[The Start of Assistant B's Answer]
+OpenCL and CUDA are both programming languages for parallel computing on GPUs, but they differ in several key ways:
+
+1.   Architecture: OpenCL is a general-purpose parallel computing language, while CUDA is designed specifically for GPU computing. OpenCL can run on various types of processors, including CPUs, GPUs, and FPGAs, whereas CUDA is only compatible with NVIDIA GPUs.
+2.   Language: OpenCL is a C++ language, while CUDA is a C++ language with additional features for GPU computing. CUDA provides additional libraries and tools for handling graphics and other tasks unique to GPUs.
+3.   Driver support: OpenCL has a wider range of device support, with support for not just NVIDIA GPUs but also other manufacturers like AMD, Intel, and ARM. CUDA is only available on NVIDIA GPUs, and requires the CUDA Toolkit to be installed on the host machine.
+4.   Memory management: OpenCL provides a unified memory model, where all the data is stored in global memory, and the kernel can access any part of it. CUDA, on the other hand, uses a hierarchical memory architecture, where data is divided into host, device, and shared memory.
+5.   Performance: OpenCL and CUDA have different strengths and weaknesses in terms of performance. OpenCL is generally faster for numerical computations, while CUDA is faster for graphics and other tasks that require fast memory access. CUDA also has better support for 64-bit floating-point operations, which are essential for some scientific applications.
+
+In summary, OpenCL and CUDA are both programming languages for parallel computing on GPUs, but they differ in terms of architecture, language, driver support, memory management, and performance. OpenCL is a general-purpose language that can run on various types of processors, while CUDA is specific to NVIDIA GPUs and provides additional libraries and tools for handling graphics and other tasks unique to GPUs.
+[The End of Assistant B's Answer]
+[[
+
+average relative loglikelihood probability of negative example: 0.44959625893427213
+average similarity between predicted answer and gold answer: 0.3888489639477782
+74
+
+average similarity of hidden states between positive and negative examples: 0.3671053631491478
+num of counter example pairs: 13896 num of negative examples: 47
+number of cluster categories: 7
+
+0it [00:00, ?it/s]
+500it [00:00, 244508.80it/s]

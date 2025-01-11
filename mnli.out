@@ -1,0 +1,22 @@
+INFO 11-24 15:52:08 llm_engine.py:72] Initializing an LLM engine with config: model='./models/llama2-13b-chat', tokenizer='./models/llama2-13b-chat', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, seed=0)
+INFO 11-24 15:52:21 llm_engine.py:322] # GPU blocks: 4612, # CPU blocks: 327
+INFO 11-24 15:52:22 model_runner.py:632] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 11-24 15:52:22 model_runner.py:636] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 11-24 15:52:27 model_runner.py:698] Graph capturing finished in 5 secs.
+
+  0%|          | 0/19647 [00:00<?, ?it/s]/home/ubuntu/miniconda3/envs/CAL_dect/lib/python3.10/site-packages/autobiasdetector/Inference.py:74: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  label_spaces_ids = torch.tensor(label_spaces_ids, dtype=torch.int32).to(self.device)
+
+Examine the pair of sentences and determine if they exhibit entailment, neutral, or contradiction. Answer with either 'entailment', 'neutral', or 'contradiction':
+Premise: The new rights are nice enough. Hypothesis: Everyone really likes the newest benefits.
+Answer:
+The relationship between the two provided sentences is '
+
+average relative loglikelihood probability of negative example: 0.21051710158097908
+average similarity between predicted answer and gold answer: 0.6584211329974042
+277
+
+average similarity of hidden states between positive and negative examples: 0.571518268642269
+num of counter example pairs: 29051 
+num of negative examples: 45
+number of cluster categories: 6
